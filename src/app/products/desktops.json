@@ -1,0 +1,37 @@
+[
+  {
+    "brand": "Dell E70",
+    "price": 40000,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61zqzS0o45L._SX466_.jpg"
+  },
+  {
+    "brand": "HP S1",
+    "price": 36000,
+    "image": "https://i.dell.com/sites/csimages/Video_Imagery/all/xps_7590_touch.png"
+  },
+  {
+    "brand": "Lenovo",
+    "price": 28000,
+    "image": "https://www.91-img.com/pictures/laptops/dell/dell-15r-5537-core-i7-4th-gen-8-gb-1-tb-windows-8-2-gb-61307-large-1.jpg"
+  },
+  {
+    "brand": "Acer",
+    "price": 22000,
+    "image": "https://5.imimg.com/data5/GA/AX/CG/SELLER-60042675/acer-laptop-500x500.jpg"
+  },
+  {
+    "brand": "HP V2",
+    "price": 58000,
+    "image": "https://rukminim1.flixcart.com/image/416/416/jmz7csw0/computer/f/b/c/hp-na-laptop-original-imaf9zypu2mjhzmk.jpeg?q=70"
+  },
+  {
+    "brand": "Apple J9",
+    "price": 92000,
+    "image": "https://rukminim1.flixcart.com/image/416/416/jsnjbm80/computer/j/8/c/apple-na-thin-and-light-laptop-original-imafe6f78hur4jbh.jpeg?q=70"
+  },
+  {
+    "brand": "Samsung L3",
+    "price": 57000,
+    "image": "https://static.toiimg.com/photo/64550606/Samsung-Notebook-9-Pro-NP940X3M-K02HK-Laptop-Core-i7-7th-Gen8-GB256-GB-SSDWindows-10.jpg"
+  }
+]

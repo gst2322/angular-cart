@@ -1,0 +1,32 @@
+[
+  {
+    "image": "https://shm-shopmanianet.netdna-ssl.com/files/p/t/645/samsung-galaxy-j7-j700f~9487645.jpg",
+    "brand": "Samsung Galaxy M31",
+    "price": 14000
+  },
+  {
+    "image": "https://www.stickpng.com/assets/images/5a4244f818ce7e85ae60ddef.png",
+    "brand": "Samsung  Galaxy S7",
+    "price": 12000
+  },
+  {
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/nokia-5228.jpg",
+    "brand": "Nokia 5332",
+    "price": 15000
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41yPjeDVY4L._SL1024_.jpg",
+    "brand": "Apple Iphone 5s",
+    "price": 19999
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61Z-7BVaFUL._SL1500_.jpg",
+    "brand": "Redmi Note 4",
+    "price": 15999
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51Hoc5kLc5L._SL1500_.jpg",
+    "brand": "Redmi 6 Pro",
+    "price": 12999
+  }
+]

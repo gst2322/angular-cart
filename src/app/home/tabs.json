@@ -1,0 +1,37 @@
+[
+  {
+    "brand": "Apple iPad 6",
+    "price": 88000,
+    "image": "https://m.media-amazon.com/images/I/51x4j48wCpL._AC_UY327_QL65_ML3_.jpg"
+  },
+  {
+    "brand": "Lenovo Tab 4 10",
+    "price": 41000,
+    "image": "https://m.media-amazon.com/images/I/71vJ+ECyuOL._AC_UY327_QL65_ML3_.jpg"
+  },
+  {
+    "brand": "Samsung Galaxy Tab A 7.0",
+    "price": 33300,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71PWPoS%2BNtL._SL1500_.jpg"
+  },
+  {
+    "brand": "Apple iPad Mini",
+    "price": 45000,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51y5AX6aOCL._SL1024_.jpg"
+  },
+  {
+    "brand": "Huawei T3 10 Tablet",
+    "price": 47000,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71GHhd5YQyL._SL1500_.jpg"
+  },
+  {
+    "brand": "Lenovo Tab 2 A7-20",
+    "price": 15000,
+    "image": "https://m.media-amazon.com/images/I/61-jq1xIxLL._AC_UY327_FMwebp_QL65_.jpg"
+  },
+  {
+    "brand": "IBall Slide i70 ",
+    "price": 9999,
+    "image": "https://m.media-amazon.com/images/I/516Gxq910KL._AC_UY327_QL65_ML3_.jpg"
+  }
+]

@@ -1,0 +1,48 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-button color="secondary" routerLink="/home"><ion-title>Home </ion-title> </ion-button>
+      <ion-button routerLink="/about"><ion-title>About </ion-title> </ion-button>
+      <ion-button routerLink="/contact"><ion-title>Contact </ion-title> </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <ion-img src="http://www.salasarcalltech.com/images/web_development.jpg"></ion-img>
+  <ion-row>
+    <ion-col offset="3" size="6">
+      <ion-button
+        color="tertiary"
+        (click)="mobiles = true; desktops = false; tabs = false; clothes = false"
+        expand="block"
+        routerLink="/products"
+        >Mobiles <ion-icon name="phone-portrait"></ion-icon>
+      </ion-button> </ion-col
+    ><br />
+    <ion-col offset="3" size="6">
+      <ion-button
+        color="tertiary"
+        (click)="mobiles = false; desktops = true; tabs = false; clothes = false"
+        expand="block"
+        routerLink="/products"
+        >Desktops <ion-icon name="desktop"></ion-icon>
+      </ion-button> </ion-col
+    ><br />
+    <ion-col offset="3" size="6">
+      <ion-button
+        color="tertiary"
+        (click)="mobiles = false; desktops = false; tabs = true; clothes = false"
+        expand="block"
+        routerLink="/products"
+        >Tabs <ion-icon name="tablet-landscape"></ion-icon>
+      </ion-button> </ion-col
+    ><br />
+    <ion-col offset="3" size="6">
+      <ion-button
+        color="tertiary"
+        (click)="mobiles = false; desktops = false; tabs = false; clothes = true"
+        expand="block"
+        routerLink="/products"
+        >Speakers <ion-icon name="musical-notes"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,159 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button color="secondary" routerLink="/home"><ion-title>Home </ion-title> </ion-button>
+    <ion-button routerLink="/about"><ion-title>About </ion-title> </ion-button>
+    <ion-button routerLink="/contact"><ion-title>Contact </ion-title> </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="!confirmed">
+  <ion-row>
+    <ion-col>
+      <ion-button
+        [color]="mobiles == true ? 'tertiary' : ''"
+        (click)="mobiles = true; desktops = false; tabs = false; clothes = false"
+        expand="full"
+        >Mobiles <ion-icon name="phone-portrait"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button
+        [color]="desktops == true ? 'tertiary' : ''"
+        expand="full"
+        (click)="mobiles = false; desktops = true; tabs = false; clothes = false"
+        >Desktops <ion-icon name="desktop"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button
+        [color]="tabs == true ? 'tertiary' : ''"
+        expand="full"
+        (click)="mobiles = false; desktops = false; tabs = true; clothes = false"
+        >Tabs <ion-icon name="tablet-landscape"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button
+        [color]="clothes == true ? 'tertiary' : ''"
+        expand="full"
+        (click)="mobiles = false; desktops = false; tabs = false; clothes = true"
+        >Speakers <ion-icon name="musical-notes"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-content *ngIf="mobiles">
+    <div *ngFor="let mdata of mobilesData" style="float: left;">
+      <ion-card style="height: 320px; width: 340px;">
+        <div>
+          <ion-img style="width: 238px;height: 197px;" src="{{ mdata.image }}"></ion-img>
+        </div>
+        <ion-text style="font-size: 22px;margin-left: 41px">
+          <b> {{ mdata.brand }}</b>
+        </ion-text>
+        <br /><br />
+        <ion-title style="margin-left: 20px;font-size: 27px;"
+          ><b>{{ mdata.price }}Rs</b>
+        </ion-title>
+        <ion-button (click)="addM(mdata.brand, mdata.price, mdata.count)"
+          >Add to cart<ion-icon name="cart"></ion-icon
+        ></ion-button>
+        ( {{ getCount(mdata.brand) }} )
+      </ion-card>
+    </div>
+  </ion-content>
+  <ion-content *ngIf="desktops">
+    <div *ngFor="let dData of desktopData" style="float: left;">
+      <ion-card style="height: 320px; width: 340px;">
+        <div>
+          <ion-img style="width: 238px;height: 197px;" src="{{ dData.image }}"></ion-img>
+        </div>
+        <ion-text style="font-size: 22px;margin-left: 41px">
+          <b> {{ dData.brand }}</b>
+        </ion-text>
+        <br /><br />
+        <ion-title style="margin-left: 20px;font-size: 27px;"
+          ><b>{{ dData.price }}Rs</b>
+        </ion-title>
+        <ion-button (click)="addM(dData.brand, dData.price, dData.count)"
+          >Add to cart<ion-icon name="cart"></ion-icon
+        ></ion-button>
+        ( {{ getCount(dData.brand) }} )
+      </ion-card>
+    </div>
+  </ion-content>
+  <ion-content *ngIf="tabs">
+    <div *ngFor="let tData of tabsData" style="float: left;">
+      <ion-card style="height: 320px; width: 340px;">
+        <div>
+          <ion-img style="width: 238px;height: 197px;" src="{{ tData.image }}"></ion-img>
+        </div>
+        <ion-text style="font-size: 22px;margin-left: 41px">
+          <b> {{ tData.brand }}</b>
+        </ion-text>
+        <br /><br />
+        <ion-title style="margin-left: 20px;font-size: 27px;"
+          ><b>{{ tData.price }}Rs</b>
+        </ion-title>
+        <ion-button (click)="addM(tData.brand, tData.price, tData.count)"
+          >Add to cart<ion-icon name="cart"></ion-icon
+        ></ion-button>
+        ( {{ getCount(tData.brand) }} )
+      </ion-card>
+    </div>
+  </ion-content>
+  <ion-content *ngIf="clothes">
+    <div *ngFor="let sData of speakersData" style="float: left;">
+      <ion-card style="height: 320px; width: 340px;">
+        <div>
+          <ion-img style="width: 238px;height: 197px;" src="{{ sData.image }}"></ion-img>
+        </div>
+        <ion-text style="font-size: 22px;margin-left: 41px">
+          <b> {{ sData.brand }}</b>
+        </ion-text>
+        <br /><br />
+        <ion-title style="margin-left: 20px;font-size: 27px;"
+          ><b>{{ sData.price }}Rs</b>
+        </ion-title>
+        <ion-button (click)="addM(sData.brand, sData.price, sData.count)"
+          >Add to cart<ion-icon name="cart"></ion-icon
+        ></ion-button>
+        ( {{ getCount(sData.brand) }} )
+      </ion-card>
+    </div>
+  </ion-content>
+</ion-content>
+<ion-text
+  *ngIf="!confirmed"
+  style="background-color: burlywood;height: 50px;font-size: 35px;font-family:sans-serif;text-align: right;"
+>
+  Total = {{ total }}Rs</ion-text
+>
+<ion-button *ngIf="!confirmed" (click)="checkout = !checkout"
+  >{{ checkout == true ? 'close' : 'checkout' }}<ion-icon name="cart"></ion-icon>
+</ion-button>
+<ion-button *ngIf="!confirmed" (click)="reset()">Reset <ion-icon name="refresh"></ion-icon> </ion-button>
+
+<ion-content *ngIf="checkout && !proceed && !confirmed" style="height: 1000px;">
+  You Added :
+  <div *ngFor="let checkoutItem of checkoutItems">
+    <li>{{ checkoutItem.brand }} ({{ checkoutItem.quantity }})</li>
+  </div>
+  <br />
+  <ion-button [disabled]="total === 0" color="tertiary" (click)="proceed = !proceed" style="position: fixed;bottom: 0;">
+    Proceed to Order</ion-button
+  >
+</ion-content>
+<ion-content *ngIf="proceed && !confirmed">
+  <form style="margin-left: 15%;">
+    <ion-input style="border: 1px grey solid;width:300px" required placeholder="Name"></ion-input>
+    <ion-input style="border: 1px grey solid;width:300px" required placeholder="Mobile"></ion-input>
+    <ion-input style="border: 1px grey solid;width:300px" required placeholder="Address"></ion-input>
+    <ion-button (click)="confirmed = true" type="submit">Confirm</ion-button>
+  </form>
+</ion-content>
+
+<ion-content *ngIf="confirmed">
+  <div class="confirmed">
+    <ion-text>Thank You, Your order is placed</ion-text><br />
+    <ion-button (click)="gotohome()">Go to Home</ion-button>
+  </div>
+</ion-content>
